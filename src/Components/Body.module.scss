@@ -1,0 +1,8 @@
+.container {
+    grid-column-start: 2;
+}
+@media (max-width: 600px) {
+    .container{
+        grid-column-start: 1;
+    }
+}

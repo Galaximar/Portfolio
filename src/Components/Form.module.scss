@@ -1,0 +1,12 @@
+.mail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    button {
+        width: 50%;
+    }
+}

@@ -1,0 +1,219 @@
+.container{
+    padding-top: 10px;
+    .perfil {
+        margin-bottom: 10px;
+        position: relative;
+        height: 200px;
+        box-shadow: -5px 5px 5px #424242;
+        border-radius: 15px;
+        width: 100%;
+        .name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            h2 {
+                font-size: 35px;
+            }
+            h3 {
+                font-size: 25px;
+            }
+        }
+        .perfilImg {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            z-index: 100;
+        }
+        .fondoImg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .helloImg{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            top: 0;
+            right: 0;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            opacity: 0.4;
+        }
+        .perfilFondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background: #424242;
+        }
+    }
+}
+.trapecio{
+    position: absolute;
+    bottom: -300px;
+    left: calc(50% - 330px);
+    width: 300px;
+    height: 0px;
+    border-right: 180px solid transparent;
+    border-left: 180px solid transparent;
+    border-top: 300px solid #424242;
+}
+.trapecio:hover{
+    border-top: 300px solid #dd2c00;
+}
+.text{
+    margin-top: 310px;
+}
+.ball1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -250px;
+    left: 100px;
+    background-color: #424242;
+    cursor: pointer;
+}
+.ball2{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -140px;
+    right: 100px;
+    background-color: #424242;
+    cursor: pointer;
+}
+.ball1:hover{
+    background-color: #dd2c00;
+}
+.ball2:hover{
+    background-color: #dd2c00;
+}
+
+@media (max-width: 840px) {
+    .trapecio{
+        bottom: -225px;
+        left: calc(50% - 247.5px);
+        width: 225px;
+        height: 0px;
+        border-right: 135px solid transparent;
+        border-left: 135px solid transparent;
+        border-top: 225px solid #424242;
+    };
+    .trapecio:hover{
+        border-top: 225px solid #dd2c00;
+    };
+    .container{
+        .perfil{
+            .perfilFondo{
+                width: 140px;
+                height: 140px;
+            };
+            .perfilImg{
+                width: 130px;
+                height: 130px;
+            };
+        }
+    }
+}
+@media (max-width: 570px) {
+    .trapecio{
+        bottom: -150px;
+        left: calc(50% - 165px);
+        width: 150px;
+        height: 0px;
+        border-right: 90px solid transparent;
+        border-left: 90px solid transparent;
+        border-top: 150px solid #424242;
+    };
+    .trapecio:hover{
+        border-top: 150px solid #dd2c00;
+    };
+    .container{
+        .perfil{
+            .perfilFondo{
+                width: 140px;
+                height: 140px;
+            };
+            .perfilImg{
+                width: 130px;
+                height: 130px;
+            };
+            .name{
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                text-align: center;
+                width: 100%;
+                transform: translate(-50%,-50%);
+                h2 {
+                    font-size: 25px;
+                }
+                h3 {
+                    font-size: 15px;
+                }
+            };
+        }
+    }
+}
+@media (max-width: 465px) {
+    .container{
+        .perfil{
+            .helloImg{
+                width: 160px;
+                height: 80px;
+            }
+            .name{
+                position: absolute;
+                top: 70%;
+                left: 100%;
+                width: auto;
+                transform: translate(-100%,-50%);
+                h2 {
+                    font-size: 25px;
+                }
+                h3 {
+                    font-size: 15px;
+                }
+            };
+        }
+    }
+}
+@media (max-width: 350px) {
+    .trapecio{
+        bottom: -125px;
+        left: calc(50% - 122.5px);
+        width: 125px;
+        height: 0px;
+        border-right: 60px solid transparent;
+        border-left: 60px solid transparent;
+        border-top: 125px solid #424242;
+    };
+    .trapecio:hover{
+        border-top: 125px solid #dd2c00;
+    };
+}
+@media (max-width: 250px) {
+    .trapecio{
+        bottom: -83.333px;
+        left: calc(50% - 81.6665px);
+        width: 83.333px;
+        height: 0px;
+        border-right: 40px solid transparent;
+        border-left: 40px solid transparent;
+        border-top: 83.333px solid #424242;
+    };
+    .trapecio:hover{
+        border-top: 83.333px solid #dd2c00;
+    };
+}

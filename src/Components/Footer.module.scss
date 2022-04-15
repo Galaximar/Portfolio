@@ -1,0 +1,47 @@
+.container{
+    margin-bottom: 10px;
+    background-color: #424242;
+    padding: 10px 30px 10px 30px;
+    border-radius: 15px;
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;  
+        .contacts{
+            word-wrap: break-word;
+            max-width: 100%;
+            p{
+                height: 35.69px;
+            }
+        }
+        a {
+            text-decoration: none;
+        } 
+    }
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+    .link {
+        display: block;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    
+}
+.containerLinks{
+    margin-top: -8px;
+}
+@media (max-width: 600px) {
+    .container{
+        .info{
+            display: inline-block;
+            width: 100%;
+            .contacts{
+                p{
+                    height: auto;
+                }
+            }
+        }
+    }
+}
