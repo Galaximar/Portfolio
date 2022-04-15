@@ -8,7 +8,6 @@ import './App.scss'
 function App() {
     return (
         <>
-            {/*<NavBar />*/}
             <Routes>
                 <Route path="/" element={<Home />} />
             </Routes>

@@ -1,0 +1,60 @@
+.button {
+    color: white;
+    padding: 0.35em 0;
+    font-size: 17px;
+    border: none;
+    border-radius: 0.7em;
+    letter-spacing: 0.08em;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 2.1em;
+    padding-left: 2.8em;
+    padding-right: 0.9em;
+    cursor: pointer;
+    width: 160px;
+   }
+   .black{
+    background-color: black;
+   }
+   .blue{
+    background: #0a66c2;
+   }
+   .button .icon {
+    background: #fff;
+    height: 2em;
+    width: 2em;
+    border-radius: 2em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.4em;
+    transition: all 0.5s;
+   }
+   
+   .icon img {
+    transition: all 0.5s;
+    color: #2CA0D9;
+    display: block;
+    margin: auto;
+    width: 1.2rem;
+    height: 1.2rem;
+   }
+   
+   .button:hover .icon img {
+    transform: rotate(360deg);
+   }
+   
+   .button:hover .icon {
+    width: calc(100% - 0.85rem);
+    border-radius: 0.5em;
+   }
+@media (max-width: 600px) {
+    .button{
+        width: 100%;
+    }
+}
