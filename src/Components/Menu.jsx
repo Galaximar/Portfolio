@@ -24,10 +24,19 @@ export default withWidth()(function Menu({refs,width}) {
       </div>
     </Hidden>
     <Hidden smUp>
-    <Box sx={{ position: 'fixed', bottom: 0, left: 0, zIndex:10000 }}>
+    <Box sx={{ position: 'fixed', bottom:"8px",left: 5, zIndex:10000}}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         icon={<SpeedDialIcon />}
+        FabProps={{
+          sx: {
+            bgcolor: '#f5f5f5',
+            '&:hover': {
+              bgcolor: '#f5f5f5',
+            },
+            color:'rgba(0, 0, 0, 0.87)'
+          }
+        }}
       >
         {[
           {name:"Contact me",icon:<CallIcon fontSize="large"/>,ref:refs[2]},

@@ -7,10 +7,13 @@ import {withWidth,Hidden} from "@material-ui/core"
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { LoadingButton } from '@mui/lab';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 
 export default withWidth() (function Form({width}) {
     const [data,setData] = useState({});
-    const [error,setError] = useState({})
+    const [error,setError] = useState({});
+    const [loading,setLoading] = useState(false);
     const form = useRef();
     const isEmail=(email)=>/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(email);
     const handleChange=({target})=>{
@@ -32,11 +35,14 @@ export default withWidth() (function Form({width}) {
           toastId: "Toast actual"
         }
         if(error.submit) {
+          setLoading(true);
           emailjs.sendForm('service_92vvg6m', 'template_jloq14k', form.current, 'Xu-sJyaRgresSfQjl')
           .then((result) => {
               toast.success("Email sent, thanks for contacting me.",config);
               form.current.reset();
-              setData({})
+              setLoading(false);
+              setError({});
+              setData({});
           }, (error) => {
               toast.error(error.text,config);
               toast.update("Toast actual", {
@@ -44,6 +50,8 @@ export default withWidth() (function Form({width}) {
                 type: toast.TYPE.ERROR,
                 autoClose: 3500
               });
+              setError({});
+              setLoading(false);
               console.log(error.text);
           });
         }
@@ -53,7 +61,7 @@ export default withWidth() (function Form({width}) {
             let description=!data.description?"*Required":error.description;
             toast.info(`${mail?("Mail"+mail+", "):""}${motive?("Motive"+motive+", "):""}${description?("Description"+description+"."):""}`,config);
             toast.update("Toast actual", {
-              render: `${mail?("Mail"+mail+", "):""}${motive?("Motive"+motive+", "):""}${description?("Description"+description+"."):""}`,
+              render: `${mail?("Mail "+mail+" "):""}${motive?("Motive "+motive+" "):""}${description?("Description "+description+"."):""}`,
               autoClose: 3500,
               type: toast.TYPE.INFO,
             });
@@ -108,12 +116,26 @@ export default withWidth() (function Form({width}) {
         id="outlined-adornment-amount"
         label="Description"
         placeholder='Hi Marcelo...'
-        helperText={error.motive}
+        helperText={error.description}
         multiline
         fullWidth
       />
-    <div className={`${!(width==="sm"||width==="xs")&&style.button}`}>
-    <Button fullWidth variant="contained" onClick={submit} color={`${error.submit?"success":"error"}`}>Submit</Button>
+    <div className={`${!(width==="sm"||width==="xs")?style.button:style.cel}`}>
+    <LoadingButton
+      loading={loading}
+      loadingPosition="start"
+      fullWidth 
+      className={`${style.content} ${width==="md"||width==="lg"||width==="xl"?style.upMd:width!=="xs"?style.upXs:style.downXs}`}
+      sx={{height:"50px",boxShadow:"none",borderRight: "6px solid #00e6f6",mt:"10px",background: `${error.submit?"linear-gradient(45deg, transparent 5%, #4caf50 5%)":"linear-gradient(45deg, transparent 5%, #ff013c 5%)"}`,'&:hover': {
+        boxShadow:"none",background: `${error.submit?"linear-gradient(45deg, transparent 5%, #2e7d32 5%)":"linear-gradient(45deg, transparent 5%, #ff013c 5%)"}`,
+      }}}
+      onClick={submit}
+      startIcon={<ForwardToInboxIcon />}
+      variant='contained'
+      color={`${error.submit?"success":"error"}`}
+    >
+       {`${loading?"Sending":"Submit"}`}
+    </LoadingButton>
     </div>
     </Box>
   );

@@ -74,30 +74,56 @@
     margin-top: 310px;
 }
 .ball1{
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 45%;
     border-radius: 50%;
     position: absolute;
-    bottom: -250px;
-    left: 100px;
-    background-color: #424242;
+    top: 140%;
+    right: 50%;
+    background: #ffbc00;
     cursor: pointer;
 }
 .ball2{
-    width: 60px;
-    height: 60px;
+    width: 22%;
+    height: 35%;
     border-radius: 50%;
     position: absolute;
-    bottom: -140px;
-    right: 100px;
-    background-color: #424242;
+    top: 160%;
+    right: 60%;
+    background: #ffbc00;
+    cursor: pointer;
+}
+.ball3{
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: 174%;
+    right: 72%;
+    background: #ffbc00;
     cursor: pointer;
 }
 .ball1:hover{
-    background-color: #dd2c00;
+    background:linear-gradient(315deg, #ffbc00, #ff0058);
 }
 .ball2:hover{
-    background-color: #dd2c00;
+    background:linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.ball3:hover{
+    background:linear-gradient(315deg, #ffbc00, #ff0058);
+}
+.circle{
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 96%;
+    height: 140%;
+    top:calc(200px - 70%);
+    border-radius: 50%;
+    background: linear-gradient(180deg, transparent 50%, #ffbc00, #ffbc00)
+}
+.circle:hover{
+    background:linear-gradient(180deg,transparent 50%, #ffbc00, #ff0058);
 }
 
 @media (max-width: 840px) {
@@ -126,7 +152,7 @@
         }
     }
 }
-@media (max-width: 570px) {
+@media (max-width: 625px) {
     .trapecio{
         bottom: -150px;
         left: calc(50% - 165px);

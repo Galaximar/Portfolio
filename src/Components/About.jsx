@@ -11,9 +11,11 @@ export default function About() {
                 <img className={style.perfilImg} src={perfil} alt="Perfil photo" />
                 <img className={style.helloImg} src="https://media-exp1.licdn.com/dms/image/C5112AQFm6aUIMtkQXw/article-inline_image-shrink_1000_1488/0/1586786516190?e=1652313600&v=beta&t=y7dL1wkoEqSQwTLeDieDpWAge6K1TUo-ecw39yXz8u0" alt="Hello world" /> 
                 <div className={style.perfilFondo}></div>
-                <div className={style.trapecio}></div>
+                {false&&<div className={style.trapecio}></div>}
+                <div className={style.circle}></div>
                 <div className={style.ball1}></div>
                 <div className={style.ball2}></div>
+                <div className={style.ball3}></div>
                 <div className={style.name}>
                   <h2>Marcelo Gottardini</h2>
                   <h3>Fullstack Developer</h3>
