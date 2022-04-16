@@ -13,9 +13,13 @@ export default function About() {
                 <div className={style.perfilFondo}></div>
                 {false&&<div className={style.trapecio}></div>}
                 <div className={style.circle}></div>
-                <div className={style.ball1}></div>
-                <div className={style.ball2}></div>
-                <div className={style.ball3}></div>
+                <div className={style.ball1}>
+                  <div className={style.ball2}>
+                    <div className={style.ball3}>
+                      <div className={style.ball4}></div>
+                    </div>
+                  </div>
+                </div>
                 <div className={style.name}>
                   <h2>Marcelo Gottardini</h2>
                   <h3>Fullstack Developer</h3>

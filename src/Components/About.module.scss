@@ -80,7 +80,7 @@
     position: absolute;
     top: 140%;
     right: 50%;
-    background: #ffbc00;
+    background: #424242;
     cursor: pointer;
 }
 .ball2{
@@ -88,29 +88,43 @@
     height: 35%;
     border-radius: 50%;
     position: absolute;
-    top: 160%;
-    right: 60%;
-    background: #ffbc00;
+    top: 100%;
+    left: 20%;
+    transform: translateX(-50%);
+    background: #424242;
     cursor: pointer;
 }
 .ball3{
-    width: 10%;
-    height: 25%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
     position: absolute;
-    top: 174%;
+    top: 160%;
     right: 72%;
-    background: #ffbc00;
+    background: #424242;
+    cursor: pointer;
+}
+.ball4{
+    width: 50%;
+    height: 60%;
+    border-radius: 50%;
+    position: absolute;
+    top: 220%;
+    right: 100%;
+    background: #424242;
     cursor: pointer;
 }
 .ball1:hover{
-    background:linear-gradient(315deg, #ffbc00, #ff0058);
+    background:linear-gradient(315deg, #e0e0e0, #424242);
 }
 .ball2:hover{
-    background:linear-gradient(315deg, #ffbc00, #ff0058);
+    background:linear-gradient(315deg, #e0e0e0, #424242);
 }
 .ball3:hover{
-    background:linear-gradient(315deg, #ffbc00, #ff0058);
+    background:linear-gradient(315deg, #e0e0e0, #424242);
+}
+.ball4:hover{
+    background:linear-gradient(315deg, #e0e0e0, #424242);
 }
 .circle{
     left: 50%;
@@ -120,13 +134,26 @@
     height: 140%;
     top:calc(200px - 70%);
     border-radius: 50%;
-    background: linear-gradient(180deg, transparent 50%, #ffbc00, #ffbc00)
+    background: linear-gradient(180deg, transparent 50%, #424242, #424242)
 }
 .circle:hover{
-    background:linear-gradient(180deg,transparent 50%, #ffbc00, #ff0058);
+    background:linear-gradient(180deg,transparent 50%, #e0e0e0, #424242);
 }
 
 @media (max-width: 840px) {
+    .ball1{
+        visibility: hidden;
+    }
+    .circle{
+        border-radius: 0;
+        width: calc(100% - 300px);
+        height: 0;
+        top: 100%;
+        border-right: 100px solid transparent;
+        border-top: 100px solid #42424286;
+        border-left: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+    }
     .trapecio{
         bottom: -225px;
         left: calc(50% - 247.5px);
