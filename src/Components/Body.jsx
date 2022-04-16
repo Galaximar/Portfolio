@@ -16,7 +16,7 @@ const everyoneStore={deploy:"https://respaldo-everyones-store.vercel.app/",title
 It also has an administrative panel, in which you can:<br/>Create/edit/delete a category, product,<br/>ban a user, convert user to admin, view transactions.</p>,role:"FullStack Developer.",tecnologies:{Frontend:["React","Redux","Css"],Backend:["Express","Sequelieze","Node",],Database:["PostgreSQL"]}};
 const blackJack={deploy:"https://blackjackapp.vercel.app",title:"Blackjack",date:"July '1-2021",image:"https://juegos.arkadiumarena.com/arenaxstorage-blob/arenax-games/BlackJack/0.51/build/resources/assets/thumbs/secondary-thumb2x.jpg",description:<p>A simple Blackjack game.<br/>One of the first projects to develop</p>,role:"Frontend Developer.",tecnologies:{Frontend:["Javascript","Uderscore","Css","Bootstrap"]}};
 const data=[
-  everyoneStore,foodApi,foodApi,blackJack
+  everyoneStore,foodApi,blackJack
 ]
 export default function Body() {
   const aboutRef=useRef(null);

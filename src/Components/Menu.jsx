@@ -11,7 +11,7 @@ import {withWidth,Hidden} from "@material-ui/core"
 export default withWidth()(function Menu({refs,width}) {
   return (
     <>
-    <Hidden xsDown>
+    <Hidden smDown>
       <div className={style.container}>
         <div className={style.optionsFather}>
           <div className={style.options}>
@@ -23,7 +23,7 @@ export default withWidth()(function Menu({refs,width}) {
         </div>
       </div>
     </Hidden>
-    <Hidden smUp>
+    <Hidden mdUp>
     <Box sx={{ position: 'fixed', bottom:"8px",left: 5, zIndex:10000}}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"

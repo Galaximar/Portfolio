@@ -147,8 +147,8 @@ export default function TimeLine() {
   return (
     <Stack sx={{ width: '100%' }} spacing={4}>
       <Stepper alternativeLabel activeStep={5} connector={<ColorlibConnector />}>
-        {steps.map((label) => (
-          <Step key={label}>
+        {steps.map((label,i) => (
+          <Step key={i}>
             <StepLabel sx={{color:"red"}} StepIconComponent={ColorlibStepIcon}><span className={style.text}>{label}</span></StepLabel>
           </Step>
         ))}

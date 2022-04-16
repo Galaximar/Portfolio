@@ -173,6 +173,9 @@
     width: calc(100% - 200px);
 }
 .box{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     .content{
         width: 100%;
         .text{
@@ -181,7 +184,7 @@
     }
 }
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     .box{
         width: 100%;
         margin-bottom: 200px;
