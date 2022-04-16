@@ -1,7 +1,7 @@
 .content,
 .content::after {
  padding: 16px 20px;
- font-size: 18px;
+ font-size: 14px;
  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
  border: 0;
  color: #fff;
@@ -11,8 +11,15 @@
  outline: transparent;
  position: relative;
  cursor: pointer;
- width: 168.06px;
+ width: 148px;
  margin-bottom: 10px;
+}
+@media (max-width:525px){
+    .content{
+        letter-spacing: 0;
+        padding: 14px 18px;
+        width: 110px;
+    }
 }
 
 .content::after {

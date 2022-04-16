@@ -4,18 +4,32 @@
         display: block;
         margin: auto;
         width: 80%;
-        transform: skewX(15deg);
         border-radius: 8px;
-        transition: 0.5s;
     }
     h2 {
         font-size: 30px;
     }
+    .text{
+        .description{
+            transform: skewX(15deg);
+            transition: 0.5s;
+        }
+        img{
+            transform: skewX(15deg);
+            transition: 0.5s;
+        } 
+    }
 }
 .box:hover{
-    img{
-        transform: skewX(0deg) scaleX(1);
-        transition: 0.5s;
+    .text{
+        .description{
+            transform: skewX(0deg) scaleX(1);
+            transition: 0.5s;
+        } 
+        img{
+            transform: skewX(0deg) scaleX(1);
+            transition: 0.5s;
+        }
     }
 }
 
@@ -142,7 +156,7 @@
     align-items: center;
    }
    .text {
-    width: calc(100% - 300px);
+    width: calc(100% - 200px);
     word-wrap: break-word;
     text-align: center;
    }
@@ -162,7 +176,7 @@
     .content{
         width: 100%;
         .text{
-            width: 100%;
+            width: calc(100% - 100px);
         }
     }
 }
@@ -179,6 +193,16 @@
     .box::after{
         width: calc(100% - 150px);
         transform: skewX(6deg);
+    }
+    .box{
+        .content{
+            .description{
+                transform: skewX(6deg);
+            }
+            img{
+                transform: skewX(6deg);
+            }
+        }
     }
 }
 .tecnosFrontend{

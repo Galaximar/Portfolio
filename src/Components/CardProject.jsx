@@ -27,7 +27,7 @@ export default function CardProject({title,date,image,description,role,tecnologi
               <p>{date}</p>
               <img src={image} alt="Project image" />
               <p><b>Role</b>: {role}</p>
-              <p>{description}</p>
+              <div className={style.description}>{description}</div>
               <div className={style.containerBtn}>
               <ModalTecnologies data={readTecnologies()}/>
               {deploy&&<ButtonTecnologies text="Deploy" link={deploy}/>}
