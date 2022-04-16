@@ -133,7 +133,15 @@ function ColorlibStepIcon(props) {
 }
 
 
-const steps = [`Bootcamp Henry | Nov-2021 to April-2022 Consta de 4 modulos de aprendizajeaaaaaaaaaaaaaa`, 'Lic.Física | Universidad Nacional de Cuyo | March-2018 to present'];
+const steps = [<p>Bootcamp Henry | Nov-2021 to April-2022 <br/>
+It consists of 4 learning modules:<br/>
+<b>1°</b> Advanced Javascript (Data Structure and Algorithms)<br/>
+<b>2°</b> Css,preprocessors (Sass), React and Redux<br/>
+<b>3°</b> NodeJs, Promises, Express<br/>
+<b>4°</b> Sql, Postgres, Sequelize<br/>
+Then the next part consisted of carrying out 2 projects, one individual and one group following an agile methodology. (SCRUM)</p>, 
+<p>Physics | Universidad Nacional de Cuyo | March-2018 to present<br/>
+I learned Mathematics, Physics, Chemistry, Biology, Statistics and Probability. Currently in the 4th year of my degree, in which I also had the opportunity to work with programming languages ​​such as Python, C and Octave.</p>];
 
 export default function TimeLine() {
   return (

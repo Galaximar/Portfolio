@@ -27,10 +27,8 @@ export default function About() {
               </div>          
           <div className={style.text}>
                   <p>
-                   Cursé en el bootcamp de Henry (fullstack developer), actual estudiante de Licenciatura en Física.
-                   Curioso, apasionado por enfrentarme a desafíos/problemas y no parar 
-                   hasta poder resolverlos, me gusta analizar las cosas para poder mejorar. 
-                   Me encanta la programación y es a lo que le dedico la mayor parte del tiempo.
+                  I attended the bootcamp of Henry (fullstack developer), current student of Bachelor of Physics. Curious, passionate about facing challenges/problems and not stopping until I can solve them, I like to analyze things in order to improve. I love programming and it is what I spend most of my time doing. Basic English, reading and writing only, in process of learning, native language Spanish. <br/>
+                  <b>In active job search.</b>
                   </p>
                   <div>
                     <TimeLine />
