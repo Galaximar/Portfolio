@@ -27,7 +27,8 @@ export default function About() {
               </div>          
           <div className={style.text}>
                   <p>
-                  I attended the bootcamp of Henry (fullstack developer), current student of Bachelor of Physics. Curious, passionate about facing challenges/problems and not stopping until I can solve them, I like to analyze things in order to improve. I love programming and it is what I spend most of my time doing. Basic English, reading and writing only, in process of learning, native language Spanish. <br/>
+                  I attended the bootcamp of Henry (fullstack developer), current student of Bachelor of Physics. Curious, passionate about facing challenges/problems and not stopping until I can solve them, I like to analyze things to improve. I love programming and it is what I spend most of my time doing. I have worked on group projects using agile <b>SCRUM</b> methodology Basic. English, only reading and writing, in the process of learning, Spanish native language.
+In active searching of a employment. <br/>
                   <b>In active job search.</b>
                   </p>
                   <div>

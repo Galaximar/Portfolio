@@ -11,7 +11,6 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: '#424242',
   borderRadius:10,
   boxShadow: 24,
@@ -28,7 +27,7 @@ export default function ModalTecnologies({data}) {
       <div onClick={handleOpen}>
         <ButtonTecnologies text="Tecnologies"/>
       </div>
-      
+      <div className={styles.modal}>
       <Modal
         open={open}
         onClose={handleClose}
@@ -45,6 +44,8 @@ export default function ModalTecnologies({data}) {
           {data}
         </Box>
       </Modal>
+      </div>
+      
     </>
   );
 }

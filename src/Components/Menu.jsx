@@ -5,6 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DownloadIcon from '@mui/icons-material/Download';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import IconMenu from "./IconMenu";
+import BuildIcon from '@mui/icons-material/Build';
 import Box from '@mui/material/Box';
 import {withWidth,Hidden} from "@material-ui/core"
 
@@ -18,7 +19,8 @@ export default withWidth()(function Menu({refs,width}) {
             <IconMenu optionRef={refs[0]} name="About me" icon={<AccountCircleIcon fontSize="large"/>} />
             <IconMenu optionRef={refs[1]} name="Projects" icon={<InventoryIcon fontSize="large"/>} />
             <IconMenu name="Curriculum - PDF" icon={<DownloadIcon fontSize="large"/>} />
-            <IconMenu optionRef={refs[2]} name="Contact me" icon={<CallIcon fontSize="large"/>} />
+            <IconMenu optionRef={refs[2]} name="Tecnologies" icon={<BuildIcon fontSize="large"/>} />
+            <IconMenu optionRef={refs[3]} name="Contact me" icon={<CallIcon fontSize="large"/>} />
           </div>
         </div>
       </div>

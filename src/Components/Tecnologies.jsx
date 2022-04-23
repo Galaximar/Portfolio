@@ -1,22 +1,23 @@
 import React from 'react'
-import js from './images/js.png';
-import auth0 from './images/auth0.png';
-import css from './images/css.png';
-import express from './images/expressjs.png';
-import firebase from './images/firebase.png';
-import formik from './images/formik.png';
-import jwt from './images/jwt.png';
-import materialui from './images/materialui.png';
-import node from './images/node.png';
-import nodemailer from './images/nodemailer.png';
-import Postgresql from './images/Postgresql.png';
-import react from './images/react.png'
-import redux from './images/redux.png'
-import scss from './images/scss.png';
-import sequelize from './images/sequelize.png'
-import framer from './images/framer-motion.png'
-import style from './Tecnologies.module.scss';
+import js from './Tecnologies/images/js.png';
+import css from './Tecnologies/images/css.png';
+import express from './Tecnologies/images/expressjs.png';
+import firebase from './Tecnologies/images/firebase.png';
+import formik from './Tecnologies/images/formik.png';
+import jwt from './Tecnologies/images/jwt.png';
+import materialui from './Tecnologies/images/materialui.png';
+import node from './Tecnologies/images/node.png';
+import nodemailer from './Tecnologies/images/nodemailer.png';
+import Postgresql from './Tecnologies/images/Postgresql.png';
+import react from './Tecnologies/images/react.png'
+import redux from './Tecnologies/images/redux.png'
+import scss from './Tecnologies/images/scss.png';
+import sequelize from './Tecnologies/images/sequelize.png'
+import emailJs from './Tecnologies/images/emailJs.png'
+import style from './Tecnologies.module.scss'
 import { motion } from "framer-motion";
+import Typography from '@mui/material/Typography'
+
 
 
 const Tools=[
@@ -30,20 +31,20 @@ const Tools=[
     {name:Postgresql, link:'https://www.postgresql.org/',description:'PostgreSQL'},
     {name:react, link:'https://es.reactjs.org/',description:'React'},
     {name:redux, link:'https://es.redux.js.org/',description:'Redux'},
-    {name:scss, link:'https://sass-lang.com/',description:'SCSS'},
-    {name:sequelize, link:'https://sequelize.org/ ',description:'Sequelize'},
-    {name:framer, link:'https://www.framer.com/motion/',description:'Framer-Motion'},
-
+    {name:scss, link:'https://sass-lang.com/',description:'SASS'},
+    {name:sequelize, link:'https://sequelize.org/',description:'Sequelize'},
+    {name:emailJs, link:'https://www.emailjs.com/',description:'EmailJS'},
 ]
 
 const Tecnologies = () => {
   return (
     <div >
+      <Typography variant="h3" sx={{color:"white"}}>Tecnologies</Typography>
       <div className={style.container}>
         {Tools ? Tools.map((tec,index)=>(
             <motion.div 
             whileHover={{
-              scale: [1, 2, 2, 1, 1],
+              scale: [1, 1.2, 1.3,1.2, 1],
               borderRadius: ["20%", "20%", "40%", "40%", "20%"],
             }}
             whileTap={{ scale: 0.9 }}

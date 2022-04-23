@@ -1,5 +1,4 @@
 .box {
-    text-align: center;
     img {
         display: block;
         margin: auto;
@@ -159,6 +158,11 @@
     width: calc(100% - 200px);
     word-wrap: break-word;
     text-align: center;
+    .description{
+        display: flex;
+        text-align: start;
+        justify-content: center;
+    }
    }
    .box .content h2 {
     font-size: 20px;
@@ -216,6 +220,7 @@
     border-radius: 8px;
     transition: 0.5s;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 .tecnosFrontend:hover{
     background: linear-gradient(315deg, #ff0058, #ffbc00 );
@@ -229,6 +234,7 @@
     background: linear-gradient(145deg, #2B86C5 0%, #FF3CAC 100%);
     border-radius: 8px;
     transition: 0.5s;
+    flex-wrap: wrap;
 }
 .tecnosBackend:hover{
     background: linear-gradient(315deg, #FF3CAC 100%, #2B86C5 0% );
@@ -238,6 +244,7 @@
 .tecnosDatabase{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     position: relative;
     background: linear-gradient(135deg, #ff85ec 0%, #84ff98 100%);
     border-radius: 8px;
