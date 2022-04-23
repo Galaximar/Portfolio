@@ -51,9 +51,9 @@ const Tecnologies = () => {
             key={Math.random(index)} 
             className={style.item}>
                 
-                <a href={tec.link} >
+                <div className={style.pointer} onClick={()=>window.open(tec.link)}>
                 <img src={tec.name} alt='tec' className={style.img}/>
-                </a>
+                </div>
                 <p className={style.parrafo}>{tec.description}</p>
             </motion.div>
         )):<div>
