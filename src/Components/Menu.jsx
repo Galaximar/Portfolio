@@ -18,7 +18,7 @@ export default withWidth()(function Menu({refs,width}) {
           <div className={style.options}>
             <IconMenu optionRef={refs[0]} name="About me" icon={<AccountCircleIcon fontSize="large"/>} />
             <IconMenu optionRef={refs[1]} name="Projects" icon={<InventoryIcon fontSize="large"/>} />
-            <IconMenu name="Curriculum - PDF" icon={<DownloadIcon fontSize="large"/>} />
+            <IconMenu name="Curriculum - PDF" icon={<DownloadIcon onClick={()=>window.open("https://www.dropbox.com/s/h52mvysxrghqcrf/Marcelo%20Gottardini%20-%20FullStack%20Developer.pdf?dl=1")} fontSize="large"/>} />
             <IconMenu optionRef={refs[2]} name="Tecnologies" icon={<BuildIcon fontSize="large"/>} />
             <IconMenu optionRef={refs[3]} name="Contact me" icon={<CallIcon fontSize="large"/>} />
           </div>
