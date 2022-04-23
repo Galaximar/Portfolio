@@ -41,8 +41,9 @@ export default withWidth()(function Menu({refs,width}) {
         }}
       >
         {[
-          {name:"Contact me",icon:<CallIcon fontSize="large"/>,ref:refs[2]},
-          {name:"Curriculum - PDF",icon:<DownloadIcon fontSize="large"/>},
+          {name:"Contact me",icon:<CallIcon fontSize="large"/>,ref:refs[3]},
+          {name:"Tecnologies",icon:<BuildIcon fontSize="large"/>,ref:refs[2]},
+          {name:"Curriculum - PDF",icon:<DownloadIcon onClick={()=>window.open("https://www.dropbox.com/s/h52mvysxrghqcrf/Marcelo%20Gottardini%20-%20FullStack%20Developer.pdf?dl=1")} fontSize="large"/>},
           {name:"Projects",icon:<InventoryIcon fontSize="large"/>,ref:refs[1]},
           {name:"About me",icon:<AccountCircleIcon fontSize="large"/>,ref:refs[0]}
         ].map((action) => (
