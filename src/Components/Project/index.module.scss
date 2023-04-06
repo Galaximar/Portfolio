@@ -1,0 +1,102 @@
+.carProject {
+  background-color: rgba(0, 0, 0, 0.705);
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 10px;
+  width: 90%;
+  max-width: 500px;
+  .imgProject {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+  }
+
+  .tecnologies {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0;
+    .stack {
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+      .stackContainer {
+        overflow-x: scroll;
+        max-width: 400px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        display: flex;
+        gap: 5px;
+        .frontend {
+          background-color: #a3336b;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          white-space: nowrap;
+        }
+        .backend {
+          background-color: #f4e04e;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          white-space: nowrap;
+        }
+        .database {
+          background-color: #5db2a5;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          white-space: nowrap;
+        }
+      }
+
+      .spanFrontend {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #a3336b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .spanBackend {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #f4e04e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .spanDatabase {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #5db2a5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,7 +1,4 @@
 import style from "./About.module.scss";
-import perfil from "../assets/perfil.jpg";
-import portada from "../assets/portada.png";
-import nube from "../assets/nube.svg";
 import TimeLineNuevo from "./TimeLineNuevo";
 
 export default function About() {
@@ -9,16 +6,28 @@ export default function About() {
     <div className={style.container}>
       <div>
         <div className={style.portada}>
-          <h1>Desarrollador web, amante de los desafíos</h1>
-          <img className={style.imgPortada} src={portada} alt="Portada" />
+          <h1>Desarrollador web</h1>
+          <img
+            className={style.imgPortada}
+            src="/assets/portada.png"
+            alt="Portada"
+          />
         </div>
 
         <div></div>
       </div>
       <div className={style.aboutContainer}>
         <div className={style.perfilContainer}>
-          <img className={style.perfilImg} src={perfil} alt="Perfil photo" />
-          <img className={style.nubeImg} src={nube} alt="Background photo" />
+          <img
+            className={style.perfilImg}
+            src="/assets/perfil.jpg"
+            alt="Perfil photo"
+          />
+          <img
+            className={style.nubeImg}
+            src="/assets/nube.svg"
+            alt="Background photo"
+          />
           <div className={style.about}>
             <p>
               <b>Hi! My name is</b>
