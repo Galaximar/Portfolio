@@ -2,14 +2,14 @@ import style from "./Footer.module.scss";
 import Form from "./Form";
 import SocialButton from "./SocialButton";
 
-export default function Footer() {
+export default function Footer({ t }) {
   return (
     <div className={style.container}>
-      <h2>Contact me</h2>
+      <h2>{t("contactame")}</h2>
       <div className={style.info}>
         <div className={style.contacts}>
           <p>
-            <b>Number</b>: 2622533309
+            <b>{t("numero")}</b>: 2622533309
           </p>
           <p>
             <b>Mail</b>: marcelogottardini00@gmail.com
@@ -41,8 +41,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <h2>Or write me</h2>
-      <Form />
+      <h2>{t("escribeme")}</h2>
+      <Form t={t} />
     </div>
   );
 }

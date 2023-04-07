@@ -1,12 +1,12 @@
 import style from "./About.module.scss";
-import TimeLineNuevo from "./TimeLineNuevo";
+import TimeLine from "./TimeLine";
 
-export default function About() {
+export default function About({ t }) {
   return (
     <div className={style.container}>
       <div>
         <div className={style.portada}>
-          <h1>Desarrollador web</h1>
+          <h1>{t("desarrollador_web")}</h1>
           <img
             className={style.imgPortada}
             src="/assets/portada.png"
@@ -18,40 +18,52 @@ export default function About() {
       </div>
       <div className={style.aboutContainer}>
         <div className={style.perfilContainer}>
-          <img
-            className={style.perfilImg}
-            src="/assets/perfil.jpg"
-            alt="Perfil photo"
-          />
+          <div className={style.perfilImg}>
+            <img src="/assets/perfil.jpg" alt="Perfil" />
+          </div>
           <img
             className={style.nubeImg}
             src="/assets/nube.svg"
-            alt="Background photo"
+            alt="Background"
           />
           <div className={style.about}>
             <p>
-              <b>Hi! My name is</b>
-              <b style={{ color: "#f4e04e" }}> Marcelo Gottardini</b>.
+              <b>{t("hola")}</b>
+              <b style={{ color: "#C5588A" }}> Marcelo Gottardini</b>.
             </p>
             <p>
-              Curious, passionate about facing challenges/problems and not
-              stopping until I can solve them, I like to analyze things to
-              improve. I love programming and it is what I spend most of my time
-              doing. English, only reading and writing, in the process of
-              learning, Spanish native language. In active searching of a
-              employment. <br />
-              <b>In active job search.</b>
+              {t("sobre_mi")} <br />
+              <b>{t("busqueda_activa")}</b>
             </p>
           </div>
         </div>
 
         <div>
-          <TimeLineNuevo
+          <TimeLine
+            t={t}
             items={[
-              "Mentor in Henry.",
-              "Frontend Developer in Vaypol (full time).",
-              "Bootcamp Henry | Nov-2021 to April-2022 It consists of 4 learning modules: 1° Advanced Javascript (Data Structure and Algorithms) 2° Css, preprocessors (Sass), React and Redux 3° NodeJs, Promises, Express 4° Sql, Postgres, Sequelize Then the next part consisted of carrying out 2 projects, one individual and one group following an agile methodology. (SCRUM)",
-              "Physics | Universidad Nacional de Cuyo | March-2018 to present I learned Mathematics, Physics, Chemistry, Biology, Statistics and Probability. Currently in the 4th year of my degree, in which I also had the opportunity to work with programming languages ​​such as Python, C and Octave.",
+              <p>
+                {t("mentor_fecha")}
+                <br />
+                {t("mentor_descripcion")}
+              </p>,
+              <p>
+                {t("vaypol_fecha")}
+                <br />
+                {t("vaypol_descripcion")}
+                <br />
+                {t("vaypol_descripcion_2")}
+              </p>,
+              <p>
+                {t("henry_fecha")}
+                <br />
+                {t("henry_descripcion")}
+              </p>,
+              <p>
+                {t("universidad_fecha")}
+                <br />
+                {t("universidad_descripcion")}
+              </p>,
             ]}
           />
         </div>

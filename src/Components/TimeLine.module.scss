@@ -7,24 +7,30 @@
 .divider {
   background-color: #555555;
   width: 2px;
-  height: 6.2rem;
-  margin: 0.2rem 0;
+  height: 100%;
+  margin: 1px 0;
 }
 .container {
-  background-image: linear-gradient(90deg, #f4e04e 50%, #c6588a 50.1%);
+  background-image: linear-gradient(90deg, #f4e14eb4 50%, #c65889a1 50.1%);
   h3 {
-    color: black;
+    color: white;
     padding-top: 30px;
     padding-left: 10px;
+    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
   }
   .timeLine {
     padding: 30px 10px;
     font-weight: 500;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     .item {
       display: flex;
-      gap: 10px;
-
+      gap: 5px;
+      min-height: 50px;
+      font-size: clamp(10px, 2vw, 15px);
+      max-width: 1300px;
       .separator {
         width: fit-content;
         display: flex;
@@ -33,7 +39,9 @@
         margin-top: 6px;
       }
       .content {
-        p {
+        height: fit-content;
+        p,
+        div {
           background-color: rgba(255, 255, 255, 0.89);
           color: black;
           padding: 10px;

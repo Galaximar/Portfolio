@@ -1,18 +1,47 @@
 .carProject {
   background-color: rgba(0, 0, 0, 0.705);
-  margin: 10px 0;
-  border-radius: 15px;
+  border-radius: 3px;
   padding: 10px;
-  width: 90%;
-  max-width: 500px;
+  width: 500px;
+  max-width: calc(100% - 20px);
+  box-shadow: 0 10px 30px -15px #09302aad;
+  min-height: 250px;
+  &:hover {
+    button {
+      border-bottom: 2px solid #f4e04e;
+      h4,
+      svg {
+        color: #f4e04e;
+      }
+    }
+  }
+  .challenge {
+    background-color: #f4e04e;
+    color: black;
+    font-weight: 600;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  .projectLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  .description {
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+  }
   .imgProject {
     object-fit: cover;
     object-position: center;
     border-radius: 15px;
     display: block;
     margin: auto;
-    width: 90%;
-    height: 90%;
+    width: 300px;
+    height: 300px;
   }
 
   .tecnologies {
@@ -24,12 +53,14 @@
       display: flex;
       gap: 5px;
       justify-content: space-between;
+
       .stackContainer {
         overflow-x: scroll;
         max-width: 400px;
         &::-webkit-scrollbar {
-          display: none;
+          height: 4px;
         }
+
         display: flex;
         gap: 5px;
         .frontend {
@@ -70,7 +101,7 @@
         }
       }
 
-      .spanFrontend {
+      .span-frontend {
         border-radius: 5px;
         padding: 2px 5px;
         background-color: rgba(255, 255, 255, 0.644);
@@ -78,8 +109,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-transform: capitalize;
       }
-      .spanBackend {
+      .span-backend {
         border-radius: 5px;
         padding: 2px 5px;
         background-color: rgba(255, 255, 255, 0.644);
@@ -87,8 +119,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-transform: capitalize;
       }
-      .spanDatabase {
+      .span-database {
         border-radius: 5px;
         padding: 2px 5px;
         background-color: rgba(255, 255, 255, 0.644);
@@ -96,6 +129,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-transform: capitalize;
       }
     }
   }

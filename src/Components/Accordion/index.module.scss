@@ -1,4 +1,7 @@
 .accordeon {
+  .title {
+    font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+  }
   .btn {
     display: flex;
     align-items: center;
@@ -19,6 +22,7 @@
   }
   .content {
     max-height: 0;
+    padding: 0 2px;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
     border-bottom-left-radius: 10px;
@@ -31,23 +35,5 @@
   }
   .close {
     max-height: 0;
-  }
-}
-
-@keyframes openAnimation {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes closeAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
   }
 }

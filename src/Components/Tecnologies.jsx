@@ -28,26 +28,38 @@ import Tecnology from "./Tecnology";
 //   { name: sequelize, link: "https://sequelize.org/", description: "Sequelize" },
 //   { name: emailJs, link: "https://www.emailjs.com/", description: "EmailJS" },
 // ];
-const Tecnologies = () => {
+const Tecnologies = ({ t }) => {
   return (
     <div className={styles.tecnologiesContainer}>
-      <div className={styles.title}> &#123; All Tecnologies &#125;</div>
+      <h3 className={styles.title}>&#123; {t("todas_tecnologias")} &#125;</h3>
       <div className={styles.tecnologies}>
-        <Tecnology href="#" tecnology="html" />
-        <Tecnology href="#" tecnology="js" />
-        <Tecnology href="#" tecnology="react" />
-        <Tecnology href="#" tecnology="redux" />
-        <Tecnology href="#" tecnology="react-hook-form" />
-        <Tecnology href="#" tecnology="next" />
-        <Tecnology href="#" tecnology="css" />
-        <Tecnology href="#" tecnology="sass" />
-        <Tecnology href="#" tecnology="material-ui" />
-        <Tecnology href="#" tecnology="chakra-ui" />
-        <Tecnology href="#" tecnology="expressjs" />
-        <Tecnology href="#" tecnology="sequelize" />
-        <Tecnology href="#" tecnology="prisma" />
-        <Tecnology href="#" tecnology="firebase" />
-        <Tecnology href="#" tecnology="postgresql" />
+        <Tecnology
+          href="https://developer.mozilla.org/es/docs/Web/HTML"
+          tecnology="html"
+        />
+        <Tecnology
+          href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+          tecnology="js"
+        />
+        <Tecnology href="https://es.reactjs.org/" tecnology="react" />
+        <Tecnology href="https://redux.js.org/" tecnology="redux" />
+        <Tecnology
+          href="https://react-hook-form.com/"
+          tecnology="react-hook-form"
+        />
+        <Tecnology href="https://nextjs.org/" tecnology="next" />
+        <Tecnology
+          href="https://developer.mozilla.org/es/docs/Web/CSS"
+          tecnology="css"
+        />
+        <Tecnology href="https://sass-lang.com/" tecnology="sass" />
+        <Tecnology href="https://mui.com/" tecnology="material-ui" />
+        <Tecnology href="https://chakra-ui.com/" tecnology="chakra-ui" />
+        <Tecnology href="https://expressjs.com/es/" tecnology="expressjs" />
+        <Tecnology href="https://sequelize.org/" tecnology="sequelize" />
+        <Tecnology href="https://www.prisma.io/" tecnology="prisma" />
+        <Tecnology href="https://firebase.google.com/" tecnology="firebase" />
+        <Tecnology href="https://www.postgresql.org/" tecnology="postgresql" />
       </div>
     </div>
   );

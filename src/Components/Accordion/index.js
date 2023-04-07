@@ -8,7 +8,7 @@ const Accordion = ({ title, children }) => {
   return (
     <div className={styles.accordeon}>
       <button className={styles.btn} onClick={() => setOpen(!open)}>
-        {title}
+        <h4 className={styles.title}>{title}</h4>
         <KeyboardArrowDownIcon
           style={{
             fontSize: "26px",

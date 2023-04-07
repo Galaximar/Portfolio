@@ -1,3 +1,8 @@
+import LaunchIcon from "@mui/icons-material/Launch";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import CodeIcon from "@mui/icons-material/Code";
+import LocalActivityIcon from "@mui/icons-material/LocalActivity";
 import Accordion from "../Accordion";
 import styles from "./index.module.scss";
 
@@ -6,64 +11,73 @@ const Project = ({
   description,
   role,
   tecnologies,
-  image,
+  challenge,
   deploy,
   github,
   video,
+  t,
 }) => {
+  const renderTecnologies = (role) => {
+    return (
+      tecnologies[role] && (
+        <div className={styles.stack}>
+          <div className={styles.stackContainer}>
+            {tecnologies[role].map((t, i) => (
+              <p key={i} className={styles[role]}>
+                {t}
+              </p>
+            ))}
+          </div>
+          <div className={styles[`span-${role}`]}>{role}</div>
+        </div>
+      )
+    );
+  };
+
   return (
-    <div className={styles.carProject}>
-      <h4>{title}</h4>
-      <Accordion title="Descripción">
-        <p>{description}</p>
-      </Accordion>
-      <p>{role}</p>
-      <div className={styles.tecnologies}>
-        <h3>Stack tecnológico</h3>
-        {tecnologies.frontend && (
-          <div className={styles.stack}>
-            <div className={styles.stackContainer}>
-              {tecnologies.frontend.map((t) => (
-                <p className={styles.frontend}>{t}</p>
-              ))}
-            </div>
-            <div className={styles.spanFrontend}>Frontend</div>
-          </div>
+    <li className={styles.carProject}>
+      <div className={styles.projectLinks}>
+        {video && (
+          <a target="_blank" href={video} rel="noreferrer">
+            <YouTubeIcon />
+          </a>
         )}
-        {tecnologies.backend && (
-          <div className={styles.stack}>
-            <div className={styles.stackContainer}>
-              {tecnologies.backend.map((t) => (
-                <p className={styles.backend}>{t}</p>
-              ))}
-            </div>
-
-            <div className={styles.spanBackend}>Backend</div>
-          </div>
+        {github && (
+          <a target="_blank" href={github} rel="noreferrer">
+            <GitHubIcon />
+          </a>
         )}
-        {tecnologies.database && (
-          <div className={styles.stack}>
-            <div className={styles.stackContainer}>
-              {tecnologies.database.map((t) => (
-                <p className={styles.database}>{t}</p>
-              ))}
-            </div>
-
-            <div className={styles.spanDatabase}>Database</div>
-          </div>
+        {deploy && (
+          <a target="_blank" href={deploy} rel="noreferrer">
+            <LaunchIcon />
+          </a>
         )}
       </div>
-      <img
-        className={styles.imgProject}
-        src={image}
-        alt={title}
-        width="300px"
-        height="300px"
-      />
-      {deploy && <a href={deploy}>DEPLOY</a>}
-      {github && <a href={github}>GITHUB</a>}
-      {video && <a href={video}>VIDEO</a>}
-    </div>
+      <Accordion title={title}>
+        <p className={styles.description}>{description}</p>
+      </Accordion>
+      <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+        <CodeIcon />
+        <p>{role}</p>
+      </div>
+
+      <div className={styles.tecnologies}>
+        <h3>Stack {t("tecnologico")}</h3>
+        {renderTecnologies("frontend")}
+        {renderTecnologies("backend")}
+        {renderTecnologies("database")}
+      </div>
+      {challenge && (
+        <a
+          target="_blank"
+          className={styles.challenge}
+          href={challenge}
+          rel="noreferrer"
+        >
+          <LocalActivityIcon /> Challenge <LaunchIcon />
+        </a>
+      )}
+    </li>
   );
 };
 

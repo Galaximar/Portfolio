@@ -8,9 +8,10 @@
     gap: 5px;
   }
   .title {
-    color: #f4e04e;
+    color: white;
     font-weight: 500;
-    font-size: clamp(2rem, 2.5vw, 4rem);
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
     margin-bottom: 20px;
+    text-align: center;
   }
 }
