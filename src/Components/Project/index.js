@@ -62,7 +62,7 @@ const Project = ({
       </div>
 
       <div className={styles.tecnologies}>
-        <h3>Stack {t("tecnologico")}</h3>
+        <p style={{ fontWeight: 600 }}>Stack {t("tecnologico")}</p>
         {renderTecnologies("frontend")}
         {renderTecnologies("backend")}
         {renderTecnologies("database")}
