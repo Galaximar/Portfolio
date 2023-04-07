@@ -1,0 +1,33 @@
+.tecnology {
+  display: flex;
+  gap: 15px;
+  max-height: 80px;
+  align-items: center;
+  transition: 0.25s ease-out;
+  padding: 30px 5px;
+  padding-right: 10vw;
+  border-radius: 10px;
+  h4 {
+    text-transform: capitalize;
+  }
+  img {
+    transition: 0.25s ease-out;
+
+    width: 80px;
+    height: 80px;
+  }
+  &:hover {
+    font-size: 30px;
+    color: #f4e04e;
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  @media (max-width: 600px) {
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}

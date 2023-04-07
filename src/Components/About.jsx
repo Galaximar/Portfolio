@@ -1,40 +1,73 @@
-import style from './About.module.scss'
-import perfil from '../assets/perfil.jpg'
-import { useEffect, useRef, useState } from "react";
-import TimeLine from './TimeLine';
+import style from "./About.module.scss";
+import TimeLine from "./TimeLine";
 
-export default function About() {
+export default function About({ t }) {
   return (
-      <div className={style.container}>
-              <div className={style.perfil}>
-                <img className={style.fondoImg} src="https://c.wallhere.com/photos/bf/e4/minimalism_Gravity_abstract_digital_art-263437.jpg!d" alt="Space" />
-                <img className={style.perfilImg} src={perfil} alt="Perfil photo" />
-                <img className={style.helloImg} src="https://media-exp1.licdn.com/dms/image/C5112AQFm6aUIMtkQXw/article-inline_image-shrink_1000_1488/0/1586786516190?e=1652313600&v=beta&t=y7dL1wkoEqSQwTLeDieDpWAge6K1TUo-ecw39yXz8u0" alt="Hello world" /> 
-                <div className={style.perfilFondo}></div>
-                {false&&<div className={style.trapecio}></div>}
-                <div className={style.circle}></div>
-                <div className={style.ball1}>
-                  <div className={style.ball2}>
-                    <div className={style.ball3}>
-                      <div className={style.ball4}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className={style.name}>
-                  <h2>Marcelo Gottardini</h2>
-                  <h3>Fullstack Developer</h3>
-                </div> 
-              </div>          
-          <div className={style.text}>
-                  <p>
-                  I attended the bootcamp of Henry (fullstack developer), current student of Bachelor of Physics. Curious, passionate about facing challenges/problems and not stopping until I can solve them, I like to analyze things to improve. I love programming and it is what I spend most of my time doing. I have worked on group projects using agile <b>SCRUM</b> methodology Basic. English, only reading and writing, in the process of learning, Spanish native language.
-In active searching of a employment. <br/>
-                  <b>In active job search.</b>
-                  </p>
-                  <div>
-                    <TimeLine />
-                  </div>
-          </div>
+    <div className={style.container}>
+      <div>
+        <div className={style.portada}>
+          <h1>{t("desarrollador_web")}</h1>
+          <img
+            className={style.imgPortada}
+            src="/assets/portada.png"
+            alt="Portada"
+          />
+        </div>
+
+        <div></div>
       </div>
+      <div className={style.aboutContainer}>
+        <div className={style.perfilContainer}>
+          <div className={style.perfilImg}>
+            <img src="/assets/perfil.jpg" alt="Perfil" />
+          </div>
+          <img
+            className={style.nubeImg}
+            src="/assets/nube.svg"
+            alt="Background"
+          />
+          <div className={style.about}>
+            <p>
+              <b>{t("hola")}</b>
+              <b style={{ color: "#C5588A" }}> Marcelo Gottardini</b>.
+            </p>
+            <p>
+              {t("sobre_mi")} <br />
+              <b>{t("busqueda_activa")}</b>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <TimeLine
+            t={t}
+            items={[
+              <p>
+                {t("mentor_fecha")}
+                <br />
+                {t("mentor_descripcion")}
+              </p>,
+              <p>
+                {t("vaypol_fecha")}
+                <br />
+                {t("vaypol_descripcion")}
+                <br />
+                {t("vaypol_descripcion_2")}
+              </p>,
+              <p>
+                {t("henry_fecha")}
+                <br />
+                {t("henry_descripcion")}
+              </p>,
+              <p>
+                {t("universidad_fecha")}
+                <br />
+                {t("universidad_descripcion")}
+              </p>,
+            ]}
+          />
+        </div>
+      </div>
+    </div>
   );
 }

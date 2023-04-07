@@ -1,25 +1,22 @@
-import NavBar from "./NavBar";
-import Menu from "./Menu";
-import {Button,makeStyles} from '@material-ui/core'
-import style from './Home.module.scss'
 import Body from "./Body";
 import ScrollTo from "./ScrollTo";
-import { Fab } from "@mui/material";
-import NavigationIcon from '@mui/icons-material/Navigation';
+import i18 from "../languages";
+import { useLocation } from "react-router-dom";
 
-const useStyles=makeStyles(theme=>({
-  offset:theme.mixins.toolbar,
-}))
+const validLanguages = { es: "es", en: "en" };
 
 export default function Home() {
-  const styles= useStyles();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  let lang = searchParams.get("lang") || "en";
+  lang = validLanguages[lang] || "en";
+  const { t } = i18(lang);
   return (
-		<>
-      <div className={style.container}>
-        <Body/>
-        <ScrollTo />
+    <>
+      <div>
+        <Body lang={lang} t={t} />
+        <ScrollTo t={t} />
       </div>
-      
-		</>
+    </>
   );
 }

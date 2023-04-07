@@ -1,251 +1,108 @@
-.container{
-    padding-top: 10px;
-    .perfil {
-        margin-bottom: 10px;
-        position: relative;
-        height: 200px;
-        box-shadow: -5px 5px 5px #424242;
-        border-radius: 15px;
+.portada {
+  background-color: #333333;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: #f4e04e;
+  padding-top: 20px;
+  h1 {
+    font-weight: 100;
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
+  }
+  .imgPortada {
+    width: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.aboutContainer {
+  position: relative;
+
+  .perfilContainer {
+    position: relative;
+    min-height: 30vw;
+    @media (max-width: 800px) {
+      min-height: 420px;
+    }
+
+    .perfilImg {
+      position: relative;
+      top: 50px;
+      left: 10%;
+      width: clamp(5.8rem, 18vw, 44rem);
+      height: clamp(5.8rem, 18vw, 44rem);
+      @media (max-width: 800px) {
+        top: 15%;
+        left: 0%;
+      }
+      img {
+        position: absolute;
         width: 100%;
-        .name {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            h2 {
-                font-size: 35px;
-            }
-            h3 {
-                font-size: 25px;
-            }
+        height: 100%;
+        border-radius: 50%;
+        z-index: 100;
+        filter: grayscale(70%);
+        &:hover {
+          filter: grayscale(0%);
         }
-        .perfilImg {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            z-index: 100;
+        @media (max-width: 800px) {
+          filter: grayscale(0%);
         }
-        .fondoImg{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            z-index: -1;
-            opacity: 0.4;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #f4e14eb4;
+        top: 5px;
+        left: 7px;
+        z-index: 1;
+        border-radius: 50%;
+        @media (max-width: 800px) {
+          top: 3px;
+          left: 5px;
         }
-        .helloImg{
-            position: absolute;
-            width: 200px;
-            height: 100px;
-            top: 0;
-            right: 0;
-            border-top-right-radius: 15px;
-            border-bottom-left-radius: 15px;
-            opacity: 0.4;
-        }
-        .perfilFondo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 100px;
-            background: #424242;
-        }
+      }
     }
-}
-.trapecio{
-    position: absolute;
-    bottom: -300px;
-    left: calc(50% - 330px);
-    width: 300px;
-    height: 0px;
-    border-right: 180px solid transparent;
-    border-left: 180px solid transparent;
-    border-top: 300px solid #424242;
-}
-.trapecio:hover{
-    border-top: 300px solid #dd2c00;
-}
-.text {
-    margin-top: 310px;
-    font-size: 20px;
-}
-
-.ball1{
-    width: 30%;
-    height: 45%;
-    border-radius: 50%;
-    position: absolute;
-    top: 140%;
-    right: 50%;
-    background: #424242;
-}
-.ball2{
-    width: 22%;
-    height: 35%;
-    border-radius: 50%;
-    position: absolute;
-    top: 100%;
-    left: 20%;
-    transform: translateX(-50%);
-    background: #424242cc;
-}
-.ball3{
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    position: absolute;
-    top: 160%;
-    right: 72%;
-    background: #4242427e;
-}
-.ball4{
-    width: 50%;
-    height: 60%;
-    border-radius: 50%;
-    position: absolute;
-    top: 220%;
-    right: 100%;
-    background: #42424242;
-}
-.circle{
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    width: 96%;
-    height: 140%;
-    top:calc(200px - 70%);
-    border-radius: 50%;
-    background: linear-gradient(180deg, transparent 50%, #424242, #424242)
-}
-
-@media (max-width: 840px) {
-    .ball1{
-        visibility: hidden;
+    .nubeImg {
+      width: 80%;
+      position: absolute;
+      left: -80px;
+      object-fit: cover;
+      object-position: center;
+      bottom: 0;
+      @media (max-width: 800px) {
+        left: 0;
+        width: 100%;
+        height: 120%;
+      }
     }
-    .text{
-        margin-top: 50px;
+    .about {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      right: 0;
+      width: 50%;
+      @media (min-width: 800px) {
+        top: 30px;
+      }
+      @media (max-width: 800px) {
+        background-color: rgba(255, 255, 255, 0.795);
+        border-radius: 10px;
+        padding: 30px 30px 40px;
+        bottom: 30px;
+        color: black;
+        width: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
-    .circle{
-        visibility: hidden;
-    }
-    .trapecio{
-        bottom: -225px;
-        left: calc(50% - 247.5px);
-        width: 225px;
-        height: 0px;
-        border-right: 135px solid transparent;
-        border-left: 135px solid transparent;
-        border-top: 225px solid #424242;
-    };
-    .trapecio:hover{
-        border-top: 225px solid #dd2c00;
-    };
-    .container{
-        .perfil{
-            .perfilFondo{
-                width: 140px;
-                height: 140px;
-            };
-            .perfilImg{
-                width: 130px;
-                height: 130px;
-            };
-        }
-    }
-}
-@media (max-width: 625px) {
-    .trapecio{
-        bottom: -150px;
-        left: calc(50% - 165px);
-        width: 150px;
-        height: 0px;
-        border-right: 90px solid transparent;
-        border-left: 90px solid transparent;
-        border-top: 150px solid #424242;
-    };
-    .trapecio:hover{
-        border-top: 150px solid #dd2c00;
-    };
-    .container{
-        .perfil{
-            .perfilFondo{
-                width: 140px;
-                height: 140px;
-            };
-            .perfilImg{
-                width: 130px;
-                height: 130px;
-            };
-            .name{
-                position: absolute;
-                top: 70%;
-                left: 50%;
-                text-align: center;
-                width: 100%;
-                transform: translate(-50%,-50%);
-                h2 {
-                    font-size: 25px;
-                }
-                h3 {
-                    font-size: 15px;
-                }
-            };
-        }
-    }
-}
-@media (max-width: 465px) {
-    .container{
-        .perfil{
-            .helloImg{
-                width: 160px;
-                height: 80px;
-            }
-            .name{
-                position: absolute;
-                top: 70%;
-                left: 100%;
-                width: auto;
-                transform: translate(-100%,-50%);
-                h2 {
-                    font-size: 25px;
-                }
-                h3 {
-                    font-size: 15px;
-                }
-            };
-        }
-    }
-}
-@media (max-width: 350px) {
-    .trapecio{
-        bottom: -125px;
-        left: calc(50% - 122.5px);
-        width: 125px;
-        height: 0px;
-        border-right: 60px solid transparent;
-        border-left: 60px solid transparent;
-        border-top: 125px solid #424242;
-    };
-    .trapecio:hover{
-        border-top: 125px solid #dd2c00;
-    };
-}
-@media (max-width: 250px) {
-    .trapecio{
-        bottom: -83.333px;
-        left: calc(50% - 81.6665px);
-        width: 83.333px;
-        height: 0px;
-        border-right: 40px solid transparent;
-        border-left: 40px solid transparent;
-        border-top: 83.333px solid #424242;
-    };
-    .trapecio:hover{
-        border-top: 83.333px solid #dd2c00;
-    };
+  }
 }

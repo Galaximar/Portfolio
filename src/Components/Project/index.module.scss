@@ -1,0 +1,136 @@
+.carProject {
+  background-color: rgba(0, 0, 0, 0.705);
+  border-radius: 3px;
+  padding: 10px;
+  width: 500px;
+  max-width: calc(100% - 20px);
+  box-shadow: 0 10px 30px -15px #09302aad;
+  min-height: 250px;
+  &:hover {
+    button {
+      border-bottom: 2px solid #f4e04e;
+      h4,
+      svg {
+        color: #f4e04e;
+      }
+    }
+  }
+  .challenge {
+    background-color: #f4e04e;
+    color: black;
+    font-weight: 600;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  .projectLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  .description {
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+  }
+  .imgProject {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .tecnologies {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0;
+    .stack {
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+
+      .stackContainer {
+        overflow-x: scroll;
+        max-width: 400px;
+        &::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        display: flex;
+        gap: 5px;
+        .frontend {
+          background-color: #a3336b;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          white-space: nowrap;
+        }
+        .backend {
+          background-color: #f4e04e;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          white-space: nowrap;
+        }
+        .database {
+          background-color: #5db2a5;
+          border-radius: 5px;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          white-space: nowrap;
+        }
+      }
+
+      .span-frontend {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #a3336b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+      }
+      .span-backend {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #f4e04e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+      }
+      .span-database {
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: rgba(255, 255, 255, 0.644);
+        color: #5db2a5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
