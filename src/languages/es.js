@@ -19,8 +19,10 @@ export const esp = {
     "Física | Universidad Nacional de Cuyo | Marzo-2018 hasta la actualidad.",
   universidad_descripcion:
     "Aprendí Matemáticas, Física, Química, Biología, Estadística y Probabilidad. Actualmente en el 4to año de mi carrera, en la que también tuve la oportunidad de trabajar con lenguajes de programación como Python, C y Octave.",
-  proyectos_personales: "Proyectos Personales",
+  proyectos: "Proyectos",
   tecnologico: "tecnológico",
+  entres_descripcion_1:
+    "Plataforma de entrega de pedidos, incluyendo app web, mobile, panel de administración y API.",
   everyone_descripcion_1:
     "Ecommerce de productos tecnológicos, utilizando Paypal como gateway de pago.",
   everyone_descripcion_2:
@@ -56,6 +58,20 @@ export const esp = {
   foodApi_descripcion_4:
     "It also consumes data provided by a food API by displaying",
   foodApi_descripcion_5: "it with their respective filters and pagination.",
+
+  // Servitur
+  servitur_descripcion_1:
+    "Aplicación que muestra los servicios disponibles, viajes de turismo e información importante de la empresa.",
+  servitur_descripcion_2:
+    "Cuenta con una api para que toda la información sea dinámica y su respectivo backoffice.",
+  // Vinitur
+  vinitur_descripcion_1:
+    "Aplicación que muestra los servicios disponibles, viajes de turismo relacionado al vino e información importante de la empresa.",
+  vinitur_descripcion_2:
+    "Cuenta con una api para que toda la información sea dinámica y su respectivo backoffice.",
+  // Nogal de cuyo
+  nogalDeCuyo_descripcion_1:
+    "Aplicación que muestra los servicios disponibles, móviles de traslado y su información.",
   todas_tecnologias: "Tecnologías",
   contactame: "Contáctame",
   numero: "Número",

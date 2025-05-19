@@ -1,11 +1,71 @@
 const dataTranslated = (t) => {
+  const entres = {
+    title: "EnTres",
+    deploy: "https://entres.com.ar/",
+    description: <>{t("entres_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass", "TypeScript", "Reat Native", "Vercel"],
+      backend: [
+        "Node",
+        "Express",
+        "Typescript",
+        "Sequelieze",
+        "Cloudinary",
+        "Render",
+      ],
+      database: ["PostgreSQL", "AWS"],
+    },
+  };
+  const servitur = {
+    title: "Servitur",
+    deploy: "https://www.servitur.tur.ar/",
+    description: (
+      <>
+        {t("servitur_descripcion_1")}
+        <br />
+        {t("servitur_descripcion_2")}
+      </>
+    ),
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass"],
+      backend: ["Next", "Sequelieze", "Cloudinary", "Vercel"],
+      database: ["PostgreSQL", "AWS"],
+    },
+  };
+  const vinitur = {
+    title: "Vinitur",
+    deploy: "https://vinitur.com.ar/",
+    description: (
+      <>
+        {t("vinitur_descripcion_1")}
+        <br />
+        {t("vinitur_descripcion_2")}
+      </>
+    ),
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass"],
+      backend: ["Next", "Sequelieze", "Cloudinary", "Vercel"],
+      database: ["PostgreSQL", "AWS"],
+    },
+  };
+  const nogalDeCuyo = {
+    title: "Nogal de cuyo",
+    deploy: "https://nogal-de-cuyo-frontend.vercel.app/",
+    description: <>{t("nogalDeCuyo_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass"],
+    },
+  };
   const foodApi = {
     video: "https://www.youtube.com/watch?v=ykrehetseuc",
     github: "https://github.com/Galaximar/FoodApi",
     title: "Food Api",
     description: (
       <>
-        {" "}
         {t("foodApi_descripcion_1")}
         <br />
         {t("foodApi_descripcion_2")}
@@ -20,40 +80,40 @@ const dataTranslated = (t) => {
     role: "FullStack Developer.",
     tecnologies: {
       frontend: ["React", "Redux", "Css"],
-      ackend: ["Express", "Sequelieze", "Node"],
+      backend: ["Express", "Sequelieze", "Node"],
       database: ["PostgreSQL"],
     },
   };
-  const everyoneStore = {
-    github: "https://github.com/E-commerce-pf",
-    deploy: "https://respaldo-everyones-store.vercel.app/",
-    title: "Everyone´s Store",
-    description: (
-      <>
-        {t("everyone_descripcion_1")}
-        <br />
-        {t("everyone_descripcion_2")}
-        <br />
-        {t("everyone_descripcion_3")}
-        <br />
-        {t("everyone_descripcion_4")}
-        <br />
-        {t("everyone_descripcion_5")}
-        <br />
-        {t("everyone_descripcion_6")}
-        <br />
-        {t("everyone_descripcion_7")}
-        <br />
-        {t("everyone_descripcion_8")}
-      </>
-    ),
-    role: "FullStack Developer.",
-    tecnologies: {
-      frontend: ["React", "Redux", "Css", "Material UI", "Sass", "Nodemailer"],
-      backend: ["Express", "Sequelieze", "Node", "JWT", "Firebase"],
-      database: ["PostgreSQL"],
-    },
-  };
+  // const everyoneStore = {
+  //   github: "https://github.com/E-commerce-pf",
+  //   deploy: "https://respaldo-everyones-store.vercel.app/",
+  //   title: "Everyone´s Store",
+  //   description: (
+  //     <>
+  //       {t("everyone_descripcion_1")}
+  //       <br />
+  //       {t("everyone_descripcion_2")}
+  //       <br />
+  //       {t("everyone_descripcion_3")}
+  //       <br />
+  //       {t("everyone_descripcion_4")}
+  //       <br />
+  //       {t("everyone_descripcion_5")}
+  //       <br />
+  //       {t("everyone_descripcion_6")}
+  //       <br />
+  //       {t("everyone_descripcion_7")}
+  //       <br />
+  //       {t("everyone_descripcion_8")}
+  //     </>
+  //   ),
+  //   role: "FullStack Developer.",
+  //   tecnologies: {
+  //     frontend: ["React", "Redux", "Css", "Material UI", "Sass", "Nodemailer"],
+  //     backend: ["Express", "Sequelieze", "Node", "JWT", "Firebase"],
+  //     database: ["PostgreSQL"],
+  //   },
+  // };
   const weather = {
     github: "https://github.com/Galaximar/Weather-App",
     deploy: "https://weatherappclime.vercel.app/",
@@ -138,7 +198,11 @@ const dataTranslated = (t) => {
     tecnologies: { backend: ["Express", "Prisma", "Postgresql", "Nodejs"] },
   };
   const data = [
-    everyoneStore,
+    // everyoneStore,
+    entres,
+    servitur,
+    vinitur,
+    nogalDeCuyo,
     survey,
     bookApi,
     tvArgentina,

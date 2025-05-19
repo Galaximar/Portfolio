@@ -19,8 +19,10 @@ export const eng = {
     "Physics | National University of Cuyo | March-2018 to present.",
   universidad_descripcion:
     "I learned Mathematics, Physics, Chemistry, Biology, Statistics and Probability. Currently in the 4th year of my degree, in which I also had the opportunity to work with programming languages ​​such as Python, C and Octave.",
-  proyectos_personales: "Personal Projects",
+  proyectos: "Projects",
   tecnologico: "technological",
+  entres_descripcion_1:
+    "Platform for delivery of orders, including web app, mobile, admin panel and API.",
   everyone_descripcion_1:
     "E-commerce of technological products, using Paypal as a payment gateway.",
   everyone_descripcion_2:
@@ -48,13 +50,26 @@ export const eng = {
   bookApi_descripcion_1:
     "API in which users can register/login, update profile information, create products (books) and modify their inventory.",
   bookApi_descripcion_2: "Validations and styles created manually.",
-  foodApi_descripcion_1: "Desarrollo de una API de Comida/Recetas.",
+  foodApi_descripcion_1: "Development of a Food/Recipe API.",
   foodApi_descripcion_2:
-    "Que tiene la capacidad de buscar, almacenar, eliminar y editar",
-  foodApi_descripcion_3: "datos de una base de datos.",
+    "Which has the ability to search, store, delete and edit",
+  foodApi_descripcion_3: "data from a database.",
   foodApi_descripcion_4:
-    "También consume datos proporcionados por una API de comida al mostrar",
-  foodApi_descripcion_5: "con sus respectivos filtros y paginación.",
+    "It also consumes data provided by a food API by displaying",
+  foodApi_descripcion_5: "it with their respective filters and pagination.",
+  // Servitur
+  servitur_descripcion_1:
+    "App that shows the available services, travel itineraries and important information of the company.",
+  servitur_descripcion_2:
+    "It has an api so that all the information is dynamic and its respective backoffice.",
+  // Vinitur
+  vinitur_descripcion_1:
+    "App that shows the available services, travel itineraries related to wine and important information of the company.",
+  vinitur_descripcion_2:
+    "It has an api so that all the information is dynamic and its respective backoffice.",
+  // Nogal de cuyo
+  nogalDeCuyo_descripcion_1:
+    "App that shows the available services, mobiles of transportation and its information.",
   todas_tecnologias: "All Technologies",
   contactame: "Contact me",
   numero: "Number",
