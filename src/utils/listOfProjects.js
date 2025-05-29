@@ -17,6 +17,33 @@ const dataTranslated = (t) => {
       database: ["PostgreSQL", "AWS"],
     },
   };
+  const agronuts = {
+    title: "Agronuts",
+    deploy: "https://agronuts-frontend.vercel.app/",
+    description: <>{t("agronuts_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass", "TypeScript", "Vercel"],
+      backend: [
+        "Node",
+        "Express",
+        "Typescript",
+        "Sequelieze",
+        "Cloudinary",
+        "Render",
+      ],
+      database: ["PostgreSQL", "NEON"],
+    },
+  };
+  const exppel = {
+    title: "Exppel",
+    deploy: "https://www.exppel.com/",
+    description: <>{t("exppel_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["React", "Sass", "TypeScript", "Vercel"],
+    },
+  };
   const servitur = {
     title: "Servitur",
     deploy: "https://www.servitur.tur.ar/",
@@ -58,6 +85,24 @@ const dataTranslated = (t) => {
     role: "FullStack Developer.",
     tecnologies: {
       frontend: ["Next", "Sass"],
+    },
+  };
+  const transportesOlv = {
+    title: "Transportes Olv",
+    deploy: "https://transportes-olv.vercel.app/",
+    description: <>{t("transportesOlv_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["React", "Sass", "TypeScript", "Vercel"],
+    },
+  };
+  const convalor = {
+    title: "Convalor",
+    deploy: "https://convalor-frontend.vercel.app/",
+    description: <>{t("convalor_descripcion_1")}</>,
+    role: "FullStack Developer.",
+    tecnologies: {
+      frontend: ["Next", "Sass", "TypeScript", "Vercel"],
     },
   };
   const foodApi = {
@@ -200,7 +245,11 @@ const dataTranslated = (t) => {
   const data = [
     // everyoneStore,
     entres,
+    agronuts,
+    exppel,
+    convalor,
     servitur,
+    transportesOlv,
     vinitur,
     nogalDeCuyo,
     survey,

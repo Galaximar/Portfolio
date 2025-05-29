@@ -5,7 +5,11 @@ export const esp = {
     "Curioso, apasionado por afrontar retos/problemas y no parar hasta poder solucionarlos, me gusta analizar las cosas para mejorar. Me encanta programar y es en lo que paso la mayor parte de mi tiempo. Inglés, solo lectura y escritura, en proceso de aprendizaje, idioma nativo español.",
   busqueda_activa: "En búsqueda activa.",
   mi_experiencia: "Mi experiencia",
-  mentor_fecha: "Mentor en Henry | Febrero 2023 - Actualidad.",
+  tria_fecha: "Tria | Febrero 2023 - Actualidad.",
+  tria_descripcion: "Desarrollador Full Stack - Freelance.",
+  entres_fecha: "EnTres | Junio 2025 - Actualidad.",
+  entres_descripcion: "Fundador y CEO. (proyecto personal). App de delivery.",
+  mentor_fecha: "Mentor en Henry | Noviembre 2023 - Marzo 2025.",
   mentor_descripcion:
     "Encargado de corregir en vivo un proyecto desarrollado por un alumno en una de las etapas del bootcamp Henry, con su posterior feedback.",
   vaypol_fecha: "Frontend en Vaypol | Mayo 2022 - Actualidad.",
@@ -21,6 +25,10 @@ export const esp = {
     "Aprendí Matemáticas, Física, Química, Biología, Estadística y Probabilidad. Actualmente en el 4to año de mi carrera, en la que también tuve la oportunidad de trabajar con lenguajes de programación como Python, C y Octave.",
   proyectos: "Proyectos",
   tecnologico: "tecnológico",
+  convalor_descripcion_1: "Landing page para empresa de ingeniería.",
+  transportesOlv_descripcion_1: "Landing page para empresa de transportes.",
+  exppel_descripcion_1: "Landing page para empresa de medicina.",
+  agronuts_descripcion_1: "Landing page para empresa de venta de frutos secos.",
   entres_descripcion_1:
     "Plataforma de entrega de pedidos, incluyendo app web, mobile, panel de administración y API.",
   everyone_descripcion_1:

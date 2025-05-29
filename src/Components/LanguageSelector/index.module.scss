@@ -5,9 +5,10 @@
   display: flex;
   gap: 5px;
   z-index: 1000;
+  padding-right: 6px;
   .btnLeft {
     position: absolute;
-    right: 30px;
+    right: 36px;
     top: -0.5px;
     padding-right: 35px;
     height: 25px;
@@ -19,7 +20,7 @@
   }
   .btnRight {
     position: absolute;
-    right: -25px;
+    right: -19px;
     top: -0.5px;
     padding-left: 35px;
     height: 25px;

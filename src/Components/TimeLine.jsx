@@ -1,7 +1,7 @@
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import style from "./TimeLine.module.scss";
 
-const Point = () => <FiberManualRecordOutlinedIcon sx={{ color: "black" }} />;
+const Point = () => <FiberManualRecordOutlinedIcon sx={{ color: "white" }} />;
 const Divider = () => <div className={style.divider} />;
 
 const TimeLine = ({ items = [], t }) => {

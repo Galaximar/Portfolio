@@ -7,11 +7,6 @@ export default function About({ t }) {
       <div>
         <div className={style.portada}>
           <h1>{t("desarrollador_web")}</h1>
-          <img
-            className={style.imgPortada}
-            src="/assets/portada.png"
-            alt="Portada"
-          />
         </div>
 
         <div></div>
@@ -29,7 +24,7 @@ export default function About({ t }) {
           <div className={style.about}>
             <p>
               <b>{t("hola")}</b>
-              <b style={{ color: "#C5588A" }}> Marcelo Gottardini</b>.
+              <b style={{ color: "#f4e04e" }}> Marcelo Gottardini</b>.
             </p>
             <p>
               {t("sobre_mi")} <br />
@@ -43,16 +38,26 @@ export default function About({ t }) {
             t={t}
             items={[
               <p>
-                {t("mentor_fecha")}
-                <br />
-                {t("mentor_descripcion")}
-              </p>,
-              <p>
                 {t("vaypol_fecha")}
                 <br />
                 {t("vaypol_descripcion")}
                 <br />
                 {t("vaypol_descripcion_2")}
+              </p>,
+              <p>
+                {t("tria_fecha")}
+                <br />
+                {t("tria_descripcion")}
+              </p>,
+              <p>
+                {t("entres_fecha")}
+                <br />
+                {t("entres_descripcion")}
+              </p>,
+              <p>
+                {t("mentor_fecha")}
+                <br />
+                {t("mentor_descripcion")}
               </p>,
               <p>
                 {t("henry_fecha")}

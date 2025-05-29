@@ -5,7 +5,11 @@ export const eng = {
     "Curious, passionate about facing challenges/problems and not stopping until I can solve them, I like to analyze things to improve. I love programming and it is what I spend most of my time doing. English, only reading and writing, in the process of learning, Spanish native language. In active searching of a employment.",
   busqueda_activa: "In active job search.",
   mi_experiencia: "My experience is",
-  mentor_fecha: "Mentor at Henry | February 2023 - Present.",
+  entres_fecha: "EnTres | June 2025 - Present.",
+  entres_descripcion: "Founder and CEO. (personal project). App for delivery.",
+  tria_fecha: "Tria | November 2023 - March 2025.",
+  tria_descripcion: "Fullstack developer - Freelance",
+  mentor_fecha: "Mentor at Henry | February 2023 - January 2025.",
   mentor_descripcion:
     "In charge of live correction of a project developed by a student in one of the stages of the Henry bootcamp, with subsequent feedback.",
   vaypol_fecha: "Frontend at Vaypol | May 2022 - Present.",
@@ -21,6 +25,10 @@ export const eng = {
     "I learned Mathematics, Physics, Chemistry, Biology, Statistics and Probability. Currently in the 4th year of my degree, in which I also had the opportunity to work with programming languages ​​such as Python, C and Octave.",
   proyectos: "Projects",
   tecnologico: "technological",
+  convalor_descripcion_1: "Landing page for engineering company.",
+  transportesOlv_descripcion_1: "Landing page for transport company.",
+  exppel_descripcion_1: "Landing page for medical company.",
+  agronuts_descripcion_1: "Landing page for agricultural fruit company.",
   entres_descripcion_1:
     "Platform for delivery of orders, including web app, mobile, admin panel and API.",
   everyone_descripcion_1:
