@@ -431,7 +431,9 @@ const Contact: React.FC = () => {
                   <p>{t("contact_cv_desc")}</p>
                   <a
                     href="/CV_Marcelo_Gottardini-Desarrollador_Full_Stack.pdf"
-                    download="Marcelo Gottardini | Desarrollador Full Stack.pdf"
+                    download="Marcelo Gottardini - Desarrollador Full Stack.pdf"
+                    target="_blank"
+                    rel="noreferrer"
                     className={styles.cvButton}
                   >
                     <Icon name="download" />
