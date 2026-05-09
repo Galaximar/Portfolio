@@ -1,0 +1,44 @@
+// Design Tokens - Exactly as images
+$primary-navy: #0f172a;
+$primary-orange: #f97316;
+$accent-orange-hover: #ea580c;
+
+$white: #ffffff;
+$slate-50: #f8fafc;
+$slate-100: #f1f5f9;
+$slate-200: #e2e8f0;
+$slate-300: #cbd5e1;
+$slate-400: #94a3b8;
+$slate-500: #64748b;
+$slate-600: #475569;
+$slate-700: #334155;
+$slate-800: #1e293b;
+$slate-900: #0f172a;
+$slate-950: #020617;
+
+// Semantic Colors
+$bg-light: $slate-50;
+$bg-dark: $slate-950;
+$text-light: $slate-900;
+$text-dark: $slate-100;
+$card-bg-light: rgba(255, 255, 255, 0.7);
+$card-bg-dark: rgba(15, 23, 42, 0.7);
+
+// Typography
+$font-heading: 'Outfit', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Glassmorphism
+$glass-blur: blur(12px);
+$glass-border-light: 1px solid rgba(255, 255, 255, 0.2);
+$glass-border-dark: 1px solid rgba(255, 255, 255, 0.05);
+
+:export {
+  primaryNavy: $primary-navy;
+  primaryOrange: $primary-orange;
+  white: $white;
+}

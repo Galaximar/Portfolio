@@ -1,0 +1,164 @@
+@import '../../../styles/variables.module.scss';
+
+.footer {
+  background: $slate-950;
+  color: white;
+  padding: 6rem 0;
+  margin-top: 4rem;
+
+  [data-theme='dark'] & {
+    background: $slate-900;
+    border-top: 1px solid $slate-800;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    margin-top: 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ctaBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.iconBox {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sendIcon {
+    width: 40px;
+    height: 40px;
+    color: $primary-orange;
+    z-index: 2;
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 112px;
+    height: 112px;
+    display: flex;
+    order: -1;
+    animation: floatSend 4s ease-in-out infinite;
+
+    &::after {
+      width: 72px;
+      height: 72px;
+    }
+
+    .sendIcon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+@keyframes floatSend {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.ctaText {
+  flex: 1;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  p {
+    color: $slate-400;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $primary-orange;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: $transition-fast;
+
+  &:hover {
+    background: $accent-orange-hover;
+    transform: translateY(-2px);
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.contactGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $slate-300;
+    font-size: 0.95rem;
+
+    .contactIcon {
+      width: 20px;
+      height: 20px;
+      color: white;
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 992px) {
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+

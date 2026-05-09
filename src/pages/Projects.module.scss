@@ -1,0 +1,411 @@
+@import '../styles/variables.module.scss';
+
+.page {
+  padding-bottom: 8rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+  }
+}
+
+.header {
+  padding: 6rem 0 4rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  .sub {
+    color: $primary-orange;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      font-size: clamp(2.45rem, 11vw, 3rem);
+      line-height: 1.08;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $slate-500;
+    max-width: 600px;
+    margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+  }
+}
+
+.statsRow {
+  display: flex;
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.miniStat {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  .miniIcon {
+    color: $primary-orange;
+    width: 24px;
+    height: 24px;
+    margin-top: 0.25rem;
+  }
+
+  strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span {
+    font-size: 0.85rem;
+    color: $slate-500;
+    display: block;
+    max-width: 200px;
+  }
+}
+
+.filtersSection {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  justify-content: center;
+
+  &::-webkit-scrollbar { height: 0; }
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background: var(--slate-100);
+  color: $slate-500;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: $transition-fast;
+
+  [data-theme='dark'] & { background: $slate-800; color: $slate-400; }
+
+  &.active {
+    background: $primary-orange;
+    color: white;
+  }
+
+  &:hover:not(.active) {
+    background: $slate-200;
+    [data-theme='dark'] & { background: $slate-700; }
+  }
+}
+
+.featuredCard {
+  display: flex;
+  background: white;
+  border: 1px solid $slate-100;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  [data-theme='dark'] & { background: $slate-900; border-color: $slate-800; }
+
+  @media (max-width: 992px) { flex-direction: column-reverse; }
+}
+
+.featuredContent {
+  flex: 0 0 38%;
+  padding: 2.5rem 2.75rem;
+
+  .tag {
+    color: $primary-orange;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h2 { font-size: 2.15rem; margin-bottom: 0.5rem; }
+  p { color: $slate-500; font-size: 1rem; margin-bottom: 1.35rem; }
+  .desc { font-size: 0.95rem; margin-bottom: 1.75rem; line-height: 1.6; }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+
+  span {
+    background: $slate-50;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $slate-600;
+    [data-theme='dark'] & { background: $slate-800; color: $slate-300; }
+  }
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: $primary-orange;
+    font-size: 0.9rem;
+  }
+}
+
+.featuredVisual {
+  flex: 1;
+  background: $slate-50;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem;
+
+  [data-theme='dark'] & { background: $slate-950; }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.metricsBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  padding: 1.25rem 1.75rem;
+  background: white;
+  border: 1px solid $slate-100;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2.5rem;
+
+  [data-theme='dark'] & { background: $slate-900; border-color: $slate-800; }
+
+  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border-right: 1px solid $slate-100;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  .mIcon { color: $slate-400; width: 20px; }
+  strong { display: block; font-size: 1.25rem; }
+  span { font-size: 0.75rem; color: $slate-500; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: white;
+  border: 1px solid $slate-100;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: $transition-normal;
+
+  [data-theme='dark'] & { background: $slate-900; border-color: $slate-800; }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $primary-orange;
+  }
+}
+
+.cardImage {
+  height: 200px;
+  background: $slate-100;
+  [data-theme='dark'] & { background: $slate-950; }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.cardInfo {
+  padding: 2rem;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h3 { font-size: 1.25rem; flex: 1; }
+    .headerTags {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .cardTag { font-size: 0.7rem; font-weight: 700; color: $primary-orange; background: #fff7ed; padding: 0.2rem 0.5rem; border-radius: 4px; white-space: nowrap; [data-theme='dark'] & { background: rgba(255, 122, 0, 0.1); } }
+    
+    .statusLabel {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      white-space: nowrap;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+
+      &.own {
+        color: #059669;
+        background: #ecfdf5;
+        .dot { background: #059669; }
+        [data-theme='dark'] & { background: rgba(5, 150, 105, 0.1); }
+      }
+
+      &.personal {
+        color: #4f46e5;
+        background: #eef2ff;
+        .dot { background: #4f46e5; }
+        [data-theme='dark'] & { background: rgba(79, 70, 229, 0.1); }
+      }
+
+      &.demo {
+        color: #d97706;
+        background: #fffbeb;
+        .dot { background: #d97706; }
+        [data-theme='dark'] & { background: rgba(217, 119, 6, 0.1); }
+      }
+
+      &.private {
+        color: $slate-500;
+        background: $slate-50;
+        svg { width: 10px; height: 10px; }
+        [data-theme='dark'] & { background: rgba(255, 255, 255, 0.05); }
+      }
+    }
+  }
+
+  p { font-size: 0.9rem; color: $slate-500; margin-bottom: 1.5rem; line-height: 1.5; }
+}
+
+.cardStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  span { font-size: 0.75rem; color: $slate-400; background: $slate-50; padding: 0.1rem 0.5rem; border-radius: 4px; [data-theme='dark'] & { background: $slate-800; } }
+}
+
+.projectNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.8rem !important;
+  color: #92400e !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.4 !important;
+
+  [data-theme='dark'] & {
+    background: rgba(251, 191, 36, 0.1);
+    border-color: rgba(251, 191, 36, 0.2);
+    color: #fcd34d !important;
+  }
+
+  .noteIcon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+}
+
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $primary-orange;
+  font-weight: 700;
+  font-size: 0.85rem;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
