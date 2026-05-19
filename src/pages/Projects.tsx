@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
       id: 'agronuts',
       title: t('project_agronuts_title'),
       desc: t('project_agronuts_desc'),
-      tag: t('project_tag_webapp'),
+      tag: t('project_tag_web_api_admin'),
       stack: ['Next.js 14', 'Sequelize', 'PostgreSQL', 'Firebase Storage', 'React Quill', 'LocalStorage Cart'],
       link: 'https://agronuts-frontend.vercel.app/',
       category: 'cat_web_apps',

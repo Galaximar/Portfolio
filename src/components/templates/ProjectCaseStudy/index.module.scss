@@ -42,8 +42,8 @@
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.35fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: 2rem;
   align-items: center;
   padding: 2.5rem 0 3rem;
 
@@ -82,11 +82,13 @@
 }
 
 .heroText h1 {
-  font-size: clamp(3.4rem, 8vw, 5.8rem);
-  line-height: 0.92;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  line-height: 0.96;
   letter-spacing: 0;
   color: $slate-900;
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 
   [data-theme='dark'] & {
     color: white;

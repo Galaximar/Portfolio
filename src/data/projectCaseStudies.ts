@@ -83,7 +83,6 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     descriptionKey: 'project_entres_desc',
     image: '/images/entres.png',
     projectUrl: 'https://entres.com.ar',
-    githubUrl: 'https://github.com/Galaximar',
     tags: ['entres_tag_storefront', 'entres_tag_backoffice', 'entres_tag_mobile', 'entres_tag_api'],
     info: [
       { labelKey: 'client_label', value: 'EnTres', icon: 'briefcase' },
@@ -292,6 +291,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     descriptionKey: 'project_checker_desc',
     image: '/images/cauciones-checker.png',
     projectUrl: 'https://cauciones-checker.onrender.com/',
+    githubUrl: 'https://github.com/Galaximar/cauciones_checker',
     tags: ['checker_tag_monitoring', 'checker_tag_scraping', 'checker_tag_alerts', 'checker_tag_history'],
     info: [
       { labelKey: 'client_label', value: 'checker_client', icon: 'briefcase' },
